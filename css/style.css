@@ -35,6 +35,7 @@ body {
   color: #252b42;
   font-weight: 500;
   font-family: Montserrat;
+  background: #fafafa;
 }
 /* -------------------------------------------- */
 .wrapper {
@@ -138,6 +139,8 @@ body {
 }
 .page__advantages {
 }
+.page__practice {
+}
 /* -----Header-Block-------------------------------------- */
 .header-block {
   text-align: center;
@@ -154,6 +157,16 @@ body {
 .header-block__subtitle {
   color: #737373;
   line-height: calc(57 / 40 * 100%);
+}
+@media (max-width: 992px) {
+  .header-block__title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .header-block__title {
+    font-size: 30px;
+  }
 }
 /* -----Main-Block-------------------------------------- */
 .main-block {
@@ -330,64 +343,86 @@ body {
 }
 /* -----Advantages-Page------------------------------------ */
 .advantages {
-  margin: 80px 0px;
+  padding: 80px 0px;
+}
+@media (max-width: 992px) {
+  .advantages {
+    padding: 50px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .advantages {
+    padding: 40px 0px;
+  }
 }
 .advantages__container {
 }
 .advantages__header {
   margin: 0px 0px 50px 0px;
 }
+@media (max-width: 767px) {
+  .advantages__column {
+    margin: 0px 0px 25px 0px;
+  }
+}
 .advantages__body {
   display: flex;
-  justify-content: center;
-}
-@media (min-width: 670px) {
-  .advantages__body {
-    display: flex;
-    margin: 0px -15px;
-  }
-}
-@media (max-width: 992px) {
-  .advantages__body {
-    flex-wrap: wrap;
-  }
-  .advantages__column:not(:last-child) {
-    margin: 0px 0px 15px 0px;
-  }
+  flex-wrap: wrap;
+  margin: 0 -15px -30px;
 }
 .advantages__column {
   padding: 0 15px;
+  margin: 0px 0px 30px 0px;
+  flex: 0 1 25%;
+}
+@media (max-width: 1020px) {
+  .advantages__column {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 560px) {
+  .advantages__column {
+    flex: 0 1 100%;
+  }
 }
 .advantages__item {
   height: 100%;
-  width: 230px;
+  min-width: 230px;
   background-color: #fff;
-  padding: 30px 40px;
+  padding: 30px;
   text-align: center;
-}
-.advantages__item > *:not(:last-child) {
-  margin: 0px 0px 10px;
+  font-weight: 700;
 }
 .advantages__icon {
+  height: 48px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 .advantages__value {
   color: #252b42;
-  font-weight: bold;
   font-size: 40px;
   line-height: calc(57 / 40 * 100%);
   letter-spacing: 0.2px;
 }
 .advantages__text {
-  font-weight: bold;
   font-size: 16px;
   line-height: calc(24 / 16 * 100%);
   letter-spacing: 0.1px;
 }
 /* -----Practice-Page------------------------------ */
-.page__practice {
-}
 .practice {
-  margin: 125px 0px 80px;
+  padding: 125px 0px 80px;
+}
+@media (max-width: 992px) {
+  .practice {
+    padding: 40px 0px 80px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .practice {
+    padding: 0px 0px 40px 0px;
+  }
 }
 .practice__container {
 }
@@ -396,26 +431,67 @@ body {
 .practice__header {
   margin: 0px 0px 45px 0px;
 }
+@media (max-width: 767px) {
+  .practice__header {
+    margin: 0px 0px 25px 0px;
+  }
+}
 .practice__body {
+  margin: 0px -20px -30px;
   display: flex;
+  flex-wrap: wrap;
 }
 .practice__column {
+  padding: 0px 20px;
+  flex: 0 1 25%;
+}
+@media (max-width: 1040px) {
+  .practice__column {
+    flex: 0 1 50%;
+    margin: 0px 0px 25px 0px;
+  }
+}
+@media (max-width: 630px) {
+  .practice__column {
+    flex: 0 1 100%;
+    margin: 0px 0px 25px 0px;
+  }
 }
 .practice__item {
-  height: 100%;
-  width: 230px;
+}
+.item-practice {
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.practice__title {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: calc(24 / 16 * 100%);
-    padding: 30px 67px 0px 30px;
+.item-practice__content {
+  padding: 30px;
+  flex: 1 1 auto;
 }
-.practice__text {
-    padding: 15px 40px 30px 30px;
+.item-practice__link {
+  color: inherit;
+  display: inline-block;
 }
-.practice__img {
+.item-practice__link:hover {
+  text-decoration: underline;
+}
+.item-practice__link:not(:last-child) {
+  margin: 0px 0px 15px 0px;
+}
+.item-practice__title {
+  letter-spacing: 0.1px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.item-practice__text {
+  color: #737373;
+  line-height: 142%;
+}
+.item-practice__image {
+  display: block;
+  padding: 0px 0px 60% 0px;
 }
 /* -----Footer------------------------------------ */
 .footer {
